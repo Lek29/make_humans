@@ -1,11 +1,18 @@
+import os
 import file_operations
 from faker import Faker
 from random import randint, choice, sample
 
 
+def create_directory(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
+
+
 def main():
     fake = Faker('ru_Ru')
-
+    path_to_direcory = 'out_put_svg'
+    create_directory(path_to_direcory)
     for num in range(1, 11):
         last_name, first_name, second_name = fake.name_male().split()
         characters_job = fake.job()
