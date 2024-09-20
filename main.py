@@ -3,7 +3,7 @@ import file_operations
 from faker import Faker
 from random import randint, choice, sample
 
-
+a = 'This proba'
 def main():
     fake = Faker('ru_Ru')
     path_to_direcory = 'out_put_svg'
